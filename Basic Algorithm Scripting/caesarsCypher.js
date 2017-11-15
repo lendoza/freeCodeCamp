@@ -1,20 +1,37 @@
-function rot13(str) { // LBH QVQ VG!
-  var decoded = "";
-  
-  for (var i in str){
-    if (str.charCodeAt(i) < 65 || str.charCodeAt(i) > 91){
-      decoded += str[i];
-      continue;
+function rot13(str){
+  var characters = str.split('');
+
+  return characters.map(function(letter){
+    letter = letter.charCodeAt();
+
+    if(letter >= 65 && letter <= 77){
+      letter += 13
     }
-    else if (str.charCodeAt(i) < 78){
-      decoded += String.fromCharCode(str.charCodeAt(i) + 13);
+    else if(letter >= 78 && letter <= 90){
+      letter -= 13
     }
-    else {
-      decoded += String.fromCharCode(str.charCodeAt(i) - 13);
-    }
-  }
-  return decoded;
+
+    return String.fromCharCode(letter);
+  }).join('');
 }
 
-// Change the inputs below to test
-rot13("SERR PBQR PNZC");
+// For Loop
+
+function rot13(str){
+  var results = [];
+
+  for(var i - 0; i < str.length; i++){
+    var num = str.charCodeAt(i);
+
+    if (num >= 65 && letter <= 77){
+      num += 13
+    }
+    else if (letter >= 78 && letter <= 90){
+      num -= 13
+    }
+
+    results.push(String.fromCharCode(num));
+  }
+
+  return results.join('');
+}

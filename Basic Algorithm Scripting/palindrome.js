@@ -1,5 +1,7 @@
 function palindrome(str) {
-  var str = str.toLowerCase().match(/\w/g).join("");
+  // Replaces all special characters using Regular Expressions
+  var str = str.toLowerCase().replace(/[\W_]/g, '');
+  
   var reverse = str.split('').reverse().join('');
   if (str === reverse) {
      return true;

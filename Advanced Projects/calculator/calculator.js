@@ -55,7 +55,6 @@ $(document).ready(function(){
 				num2.push(input);
 				$screen.html(num1.join("") + operand + num2.join(" "));
 			}
-			$(this).fadeOut(100).fadeIn(100);
 		}
 
 		function operator(){
@@ -67,7 +66,6 @@ $(document).ready(function(){
 				solved = false;
 			}
 			setOperand(input);
-			$(this).fadeOut(100).fadeIn(100);
 		}
 
 		function equal(){
@@ -96,7 +94,6 @@ $(document).ready(function(){
 				num2 = [n2];
 				solved = true;
 			}
-			$(this).fadeOut(100).fadeIn(100);
 		}
 
 	})()
